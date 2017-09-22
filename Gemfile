@@ -13,6 +13,7 @@ gem 'puma', '~> 3.7'
 gem 'uglifier', '>= 1.3.0'
 
 gem 'devise'
+gem 'activeadmin'
 
 gem 'sqlite3'
 
