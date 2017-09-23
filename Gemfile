@@ -15,6 +15,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'devise'
 gem 'activeadmin'
 gem "rolify"
+gem 'cancancan', '~> 2.0'
 
 gem 'sqlite3'
 
