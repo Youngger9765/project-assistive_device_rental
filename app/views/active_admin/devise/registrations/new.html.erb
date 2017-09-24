@@ -5,6 +5,8 @@
   <%= devise_error_messages! %>
   <%= active_admin_form_for(resource, as: resource_name, url: send(:"#{scope}_registration_path"), html: { id: "registration_new" }) do |f|
     f.inputs do
+      f.input :first_name, label: t('姓')
+      f.input :last_name, label: t('名')
       resource.class.authentication_keys.each_with_index { |key, index|
         f.input key, label: t('active_admin.devise.'+key.to_s+'.title'), input_html: { autofocus: index.zero? }
       }
