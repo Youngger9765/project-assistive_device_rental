@@ -17,7 +17,7 @@ gem 'activeadmin'
 gem "rolify"
 gem 'cancancan', '~> 2.0'
 
-gem 'sqlite3'
+gem 'mysql2', '~> 0.3.18'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
