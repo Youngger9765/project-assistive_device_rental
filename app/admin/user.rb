@@ -8,6 +8,8 @@ ActiveAdmin.register User do
     column :current_sign_in_at
     column :sign_in_count
     column :created_at
+    column :first_name
+    column :last_name
     actions
   end
 
@@ -15,6 +17,8 @@ ActiveAdmin.register User do
   filter :current_sign_in_at
   filter :sign_in_count
   filter :created_at
+  filter :first_name
+  filter :last_name
 
   form do |f|
     f.inputs do
