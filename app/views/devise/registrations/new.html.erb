@@ -1,39 +1,91 @@
-<h2>Sign up</h2>
+<style>
+  .form-group.required .control-label:before {
+  content:"* ";
+  color:red;
+  }
+  .form-group{
+    color: #222;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 18px;
+  }
+</style>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :first_name %><br />
-    <%= f.email_field :first_name, autofocus: true %>
+
+<div class="wrapper-wide">
+  <div id="container">
+    <div class="container">
+      <div class="row">
+        <!--Middle Part Start-->
+        <div class="col-sm-9" id="content">
+          <h1 class="title">Register Account</h1>
+          <p>If you already have an account with us, please login at the <a href="login.html">Login Page</a>.</p>
+          <%= form_for(@user, url: create_registration_path(:user), html: {class: "form-horizontal"}) do |f| %>
+            <%= devise_error_messages! %>
+
+            <legend>Your Personal Details</legend>
+            <br>
+
+            <div class="field form-group required">
+              <%= f.label :first_name, 'First Name', :class=> "col-sm-2 control-label" %>
+              <%= f.text_field :first_name, :class => "form-control col-sm-10", :placeholder=>"First Name"%>
+            </div>
+
+            <div class="field form-group required">
+              <%= f.label :last_name, 'Last Name', :class=> "col-sm-2 control-label" %>
+              <%= f.text_field :last_name, :class => "form-control col-sm-10", :placeholder=>"Last Name"%>
+            </div>
+
+            <div class="field form-group required">
+              <%= f.label :email, 'E-Mail', :class=> "col-sm-2 control-label"  %>
+              <%= f.email_field :email, autofocus: true, :class => "form-control col-sm-10" , :placeholder=>"Email"%>
+            </div>
+
+            <div class="field form-group required">
+              <%= f.label :password, 'Password', :class=> "col-sm-2 control-label"  %>
+              <%= f.password_field :password, autocomplete: "off", :class => "form-control col-sm-10", :placeholder=>"Password"%>
+            </div>
+
+            <div class="field form-group required">
+              <%= f.label :password_confirmation, 'Password Confirm', :class=> "col-sm-2 control-label"  %>
+              <%= f.password_field :password_confirmation, autocomplete: "off", :class => "form-control col-sm-10", :placeholder=>"Password Confirm" %>
+            </div>
+
+
+
+            <div class="actions buttons ">
+              <div class="pull-right">
+                <input type="checkbox" value="1" name="agree">
+                &nbsp;I have read and agree to the <a class="agree" href="#"><b>Privacy Policy</b></a> &nbsp;
+                <%= f.submit "Sign up" %>
+              </div>
+            </div>
+
+          <% end %>
+        </div>
+        <!--Middle Part End -->
+        <!--Right Part Start -->
+        <aside id="column-right" class="col-sm-3 hidden-xs">
+          <h3 class="subtitle">Account</h3>
+          <div class="list-group">
+            <ul class="list-item">
+              <li><a href="login.html">Login</a></li>
+              <li><a href="register.html">Register</a></li>
+              <li><a href="#">Forgotten Password</a></li>
+              <li><a href="#">My Account</a></li>
+              <li><a href="#">Address Books</a></li>
+              <li><a href="wishlist.html">Wish List</a></li>
+              <li><a href="#">Order History</a></li>
+              <li><a href="#">Downloads</a></li>
+              <li><a href="#">Reward Points</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Transactions</a></li>
+              <li><a href="#">Newsletter</a></li>
+              <li><a href="#">Recurring payments</a></li>
+            </ul>
+          </div>
+        </aside>
+        <!--Right Part End -->
+      </div>
+    </div>
   </div>
-
-  <div class="field">
-    <%= f.label :last_name %><br />
-    <%= f.email_field :last_name, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
