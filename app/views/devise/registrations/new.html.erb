@@ -20,7 +20,7 @@
         <div class="col-sm-9" id="content">
           <h1 class="title">Register Account</h1>
           <p>If you already have an account with us, please login at the <a href="login.html">Login Page</a>.</p>
-          <%= form_for(@user, url: create_registration_path(:user), html: {class: "form-horizontal"}) do |f| %>
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: "form-horizontal"}) do |f| %>
             <%= devise_error_messages! %>
 
             <legend>Your Personal Details</legend>
