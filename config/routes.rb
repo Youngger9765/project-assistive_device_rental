@@ -7,4 +7,9 @@ Rails.application.routes.draw do
 
 	root "welcome#index"
 
+	# 開http://localhost:3000/letter_opener
+	if Rails.env.development?
+		mount LetterOpenerWeb::Engine, at: "/letter_opener"
+	end
+
 end
