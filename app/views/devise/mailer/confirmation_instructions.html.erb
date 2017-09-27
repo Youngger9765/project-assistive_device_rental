@@ -1,5 +1,8 @@
-<p>Welcome <%= @email %>!</p>
+<p>歡迎使用輔具租賃系統	</p>
+<p>我們將會使用您的email進行重要資訊的聯繫，</p>
+<p>因此請確認您的email已啟動您的會員帳號並開始使用我們的服務</p>
 
-<p>You can confirm your account email through the link below:</p>
+<p>按下面連結確認email並加入我們</p>
+<p><%= link_to '[確認用網址連結]', confirmation_url(@resource, confirmation_token: @token) %></p>
 
-<p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+<p>— 輔具租賃平台</p>
