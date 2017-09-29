@@ -15,8 +15,6 @@ Rails.application.routes.draw do
     get "app_qa"
   end
 
-  get "app/app_products/:id" => "app#app_product"
-
 	# 開http://localhost:3000/letter_opener
 	if Rails.env.development?
 		mount LetterOpenerWeb::Engine, at: "/letter_opener"

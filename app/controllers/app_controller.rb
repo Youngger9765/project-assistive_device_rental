@@ -1,7 +1,4 @@
 class AppController < ApplicationController
-  def app_product
-  end
-
   def app_aboutus
   end
 
