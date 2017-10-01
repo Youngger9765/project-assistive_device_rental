@@ -26,6 +26,11 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem 'letter_opener_web'
+
+  gem "capistrano",  "~> 3.1", require: false
+  gem "capistrano-rvm", "~> 0.1.1", require: false
+  gem "capistrano-rails", "~> 1.1", require: false
+  gem "capistrano-rbenv", "~> 2.0", require: false
 end
 
 group :development do
