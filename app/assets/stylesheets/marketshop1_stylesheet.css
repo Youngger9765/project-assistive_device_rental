@@ -578,7 +578,7 @@ a:focus { outline:none; }
 	z-index:1009;
 }
 
-.dropdown:hover .dropdown-menu {
+#menu .nav .dropdown:hover .dropdown-menu {
     display: block;
 }
 

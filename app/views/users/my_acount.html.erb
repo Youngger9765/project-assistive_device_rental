@@ -1,0 +1,66 @@
+<h1>my acount</h1>
+
+<div class="wrapper-wide">
+	<h1>User show</h1>
+  <!-- Header -->
+  <%= render :partial => "layouts/header" %>
+  <!-- Header End -->
+  <div id="container">
+    <div class="container">
+      <div class="row">
+      	<!--LEFT Part Start -->
+        <%= render :partial => "layouts/sidebar" %>
+        <!--LEFT Part End -->
+        <!--Middle Part Start-->
+        <div id="content" class="col-sm-9">
+	        <!-- Breadcrumb Start-->
+		      <%= render :partial => "layouts/breadcrumb" %>
+		      <!-- Breadcrumb End-->
+        	<h1 class="title">Order History</h1>
+          <div class="table-responsive">
+		        <table class="table table-bordered table-hover">
+		          <thead>
+		            <tr>
+		            <td class="text-center">Image</td>
+		              <td class="text-left">Product Name</td>
+		              <td class="text-center">Order ID</td>
+		              <td class="text-center">Qty</td>
+		              <td class="text-center">Status</td>
+		              <td class="text-center">Date Added</td>
+		              <td class="text-right">Total</td>
+		              <td></td>
+		            </tr>
+		          </thead>
+		          <tbody>
+		                        <tr>
+		              <td class="text-center"><a href="product.html"><img class="img-thumbnail" title="Aspire Ultrabook Laptop" alt="Aspire Ultrabook Laptop" src="image/product/samsung_tab_1-50x50.jpg"></a></td>
+		              <td class="text-left"><a href="product.html">Aspire Ultrabook Laptop</a></td>
+		              <td class="text-center">#214521</td>
+		              <td class="text-center">1</td>
+		              <td class="text-center">Shipped</td>
+		              <td class="text-center">21/06/2016</td>
+		              <td class="text-right">$228.00</td>
+		              <td class="text-center"><a class="btn btn-info" title="" data-toggle="tooltip" href="order-information.html" data-original-title="View"><i class="fa fa-eye"></i></a></td>
+		            </tr>
+		                        <tr>
+		                        <td class="text-center"><a href="product.html"><img class="img-thumbnail" title="Xitefun Causal Wear Fancy Shoes" alt="Xitefun Causal Wear Fancy Shoes" src="image/product/sony_vaio_1-50x50.jpg"></a></td>
+		              <td class="text-left"><a href="product.html">Xitefun Causal Wear Fancy Shoes</a></td>
+		              <td class="text-center">#1565245</td>
+		              <td class="text-center">1</td>
+		              <td class="text-center">Shipped</td>
+		              <td class="text-center">20/06/2016</td>
+		              <td class="text-right">$133.20</td>
+		              <td class="text-center"><a class="btn btn-info" title="" data-toggle="tooltip" href="order-information.html" data-original-title="View"><i class="fa fa-eye"></i></a></td>
+		            </tr>
+		                      </tbody>
+		        </table>
+		      </div>
+        </div>
+        <!--Middle Part End -->
+      </div>
+    </div>
+  </div>
+  <!--Footer Start-->
+  <%= render :partial => "layouts/footer" %>
+  <!--Footer End-->
+</div>
