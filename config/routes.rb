@@ -7,6 +7,9 @@ Rails.application.routes.draw do
 	root "users#show"
 
 	resources :users do
+		member do
+			get :my_acount
+		end
 	end
 
 	namespace :app do
