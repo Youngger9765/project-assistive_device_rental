@@ -10,67 +10,63 @@
   }
 </style>
 
+<!--Middle Part Start-->
+  <h1 class="title">Register Account</h1>
+  <p>If you already have an account with us, please login at the <a href="login.html">Login Page</a>.</p>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: "form-horizontal"}) do |f| %>
+    <%= devise_error_messages! %>
 
+    <legend>Your Personal Details</legend>
+    <br>
 
-<div class="wrapper-wide">
-  <div id="container">
-    <div class="container">
-      <div class="row">
-        <!--LEFT Part Start -->
-        <%= render :partial => "layouts/sidebar" %>
-        <!--LEFT Part End -->
-        <!--Middle Part Start-->
-        <div class="col-sm-9" id="content">
-          <h1 class="title">Register Account</h1>
-          <p>If you already have an account with us, please login at the <a href="login.html">Login Page</a>.</p>
-          <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: "form-horizontal"}) do |f| %>
-            <%= devise_error_messages! %>
+    <div class="field form-group required">
+      <%= f.label :first_name, 'First Name', :class=> "col-sm-2 control-label" %>
+      <div class="col-sm-10">
+        <%= f.text_field :first_name, :class => "form-control", :placeholder=>"First Name"%>
+      </div>
+      
+    </div>
 
-            <legend>Your Personal Details</legend>
-            <br>
-
-            <div class="field form-group required">
-              <%= f.label :first_name, 'First Name', :class=> "col-sm-2 control-label" %>
-              <%= f.text_field :first_name, :class => "col-sm-10", :placeholder=>"First Name"%>
-            </div>
-
-            <div class="field form-group required">
-              <%= f.label :last_name, 'Last Name', :class=> "col-sm-2 control-label" %>
-              <%= f.text_field :last_name, :class => "col-sm-10", :placeholder=>"Last Name"%>
-            </div>
-
-            <div class="field form-group required">
-              <%= f.label :email, 'E-Mail', :class=> "col-sm-2 control-label"  %>
-              <%= f.email_field :email, autofocus: true, :class => "col-sm-10" , :placeholder=>"Email"%>
-            </div>
-
-            <div class="field form-group required">
-              <%= f.label :password, 'Password', :class=> "col-sm-2 control-label"  %>
-              <%= f.password_field :password, autocomplete: "off", :class => "col-sm-10", :placeholder=>"Password"%>
-            </div>
-
-            <div class="field form-group required">
-              <%= f.label :password_confirmation, 'Password Confirm', :class=> "col-sm-2 control-label"  %>
-              <%= f.password_field :password_confirmation, autocomplete: "off", :class => "col-sm-10", :placeholder=>"Password Confirm" %>
-            </div>
-
-
-
-            <div class="actions buttons ">
-              <div class="pull-right">
-                <input type="checkbox" value="1" name="agree">
-                &nbsp;I have read and agree to the <a class="agree" href="#"><b>Privacy Policy</b></a> &nbsp;
-                <%= f.submit "Sign up",:class=>"btn btn-success" %>
-              </div>
-            </div>
-
-          <% end %>
-        </div>
-        <!--Middle Part End -->
-        
+    <div class="field form-group required">
+      <%= f.label :last_name, 'Last Name', :class=> "col-sm-2 control-label" %>
+      <div class="col-sm-10">
+      <%= f.text_field :last_name, :class => "form-control", :placeholder=>"Last Name"%>
       </div>
     </div>
-  </div>
-</div>
+
+    <div class="field form-group required">
+      <%= f.label :email, 'E-Mail', :class=> "col-sm-2 control-label"  %>
+      <div class="col-sm-10">
+      <%= f.email_field :email, autofocus: true, :class => "form-control" , :placeholder=>"Email"%>
+      </div>
+    </div>
+
+    <div class="field form-group required">
+      <%= f.label :password, 'Password', :class=> "col-sm-2 control-label"  %>
+      <div class="col-sm-10">
+      <%= f.password_field :password, autocomplete: "off", :class => "form-control", :placeholder=>"Password"%>
+      </div>
+    </div>
+
+    <div class="field form-group required">
+      <%= f.label :password_confirmation, 'Password Confirm', :class=> "col-sm-2 control-label"  %>
+      <div class="col-sm-10">
+      <%= f.password_field :password_confirmation, autocomplete: "off", :class => "form-control", :placeholder=>"Password Confirm" %>
+      </div>
+    </div>
+
+
+
+    <div class="actions buttons ">
+      <div class="pull-right">
+        <input type="checkbox" value="1" name="agree">
+        &nbsp;I have read and agree to the <a class="agree" href="#"><b>Privacy Policy</b></a> &nbsp;
+        <%= f.submit "Sign up",:class=>"btn btn-success" %>
+      </div>
+    </div>
+
+  <% end %>
+<!--Middle Part End -->
+
 
 

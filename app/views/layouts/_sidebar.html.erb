@@ -4,37 +4,41 @@
   }
 </style>
 
+
 <aside id="sidebar column-left" class="col-sm-3 hidden-xs">
   <h3 class="subtitle">我的服務</h3>
-  <div class="list-group">
-    <ul class="list-item">
-      <li>
-        <a href="#my_serveice" data-toggle="collapse" data-parent="#MainMenu">我的服務方案</a>
-        <ul>
-          <div class="collapse" id="my_serveice">
-            <a href="" >使用中的方案</a>
-            <a href="" >待確認的方案</a>
-            <a href="" >已結束的方案</a>
-          </div>
-        </ul>
-      </li>
-      <li>
-        <a href="#order_list" data-toggle="collapse" data-parent="#MainMenu">訂單查詢</a>
-        <ul>
-          <div class="collapse" id="order_list">
-            <a href="" >目前訂單</a>
-            <a href="" >已發貨訂單</a>
-            <a href="" >已廢棄訂單</a>
-          </div>
-        </ul>
-      </li>
-      <li>
-        <a href="#">客戶服務</a>
-      </li>
-      <li>
-        <a href="#">個人資料</a>
-      </li>
-    </ul>
-  </div>
+  <% if current_user%>
+    <div class="list-group">
+      <ul class="list-item">
+        <li>
+          <a href="#my_serveice" data-toggle="collapse" data-parent="#MainMenu">我的服務方案</a>
+          <ul>
+            <div class="collapse" id="my_serveice">
+              <a href="" >使用中的方案</a>
+              <a href="" >待確認的方案</a>
+              <a href="" >已結束的方案</a>
+            </div>
+          </ul>
+        </li>
+        <li>
+          <a href="#order_list" data-toggle="collapse" data-parent="#MainMenu">訂單查詢</a>
+          <ul>
+            <div class="collapse" id="order_list">
+              <a href="" >目前訂單</a>
+              <a href="" >已發貨訂單</a>
+              <a href="" >已廢棄訂單</a>
+            </div>
+          </ul>
+        </li>
+        <li>
+          <a href="#">客戶服務</a>
+        </li>
+        <li>
+          <%= link_to "個人資料", my_account_user_path(@user)%>
+        </li>
+      </ul>
+    </div>
+  <%end%>
 </aside>
+
 
