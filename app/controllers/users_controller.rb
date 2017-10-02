@@ -6,7 +6,7 @@ class UsersController < ApplicationController
 	  @user = current_user
 	end
 
-	def my_acount
+	def my_account
 		@user = current_user
 		@is_subscribe = @user.is_new_sletter
 	end
@@ -33,9 +33,9 @@ class UsersController < ApplicationController
 
 		if @user.save
 			flash[:notice] = "Successfully edited"
-			redirect_to my_acount_user_path(@user)
+			redirect_to my_account_user_path(@user)
 		else
-			render :my_acount
+			render :my_account
 		end
 	end
 

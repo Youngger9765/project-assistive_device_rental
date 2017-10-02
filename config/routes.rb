@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
 	resources :users do
 		member do
-			get :my_acount
+			get :my_account
 		end
 	end
 
