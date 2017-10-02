@@ -3,7 +3,7 @@ lock "3.9.1"
 set :application, 'assistive_device_rental'
 
 set :repo_url, 'git@github.com:williamhsu17/assistive_device_rental.git'
-set :deploy_to, '/home/cbdeploy/assistive_device_rental'
+set :deploy_to, '/home/deploy/assistive_device_rental'
 set :keep_releases, 5
 
 append :linked_files, 'config/database.yml', 'config/secrets.yml'
