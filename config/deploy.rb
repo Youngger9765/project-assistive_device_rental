@@ -12,7 +12,7 @@ append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/syst
 set :passenger_restart_with_touch, true
 
 set :rbenv_type, :system
-set :rbenv_ruby, "2.4.0"
+set :rbenv_ruby, "2.4.2"
 set :rbenv_path, "/usr/local/rbenv"
 set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
 set :rbenv_map_bins, %w(rake gem bundle ruby rails)
