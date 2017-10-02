@@ -8,6 +8,7 @@ class UsersController < ApplicationController
 
 	def my_acount
 		@user = current_user
+		@is_subscribe = @user.is_new_sletter
 	end
 
 	def update

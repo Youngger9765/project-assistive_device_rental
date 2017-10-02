@@ -55,11 +55,20 @@
         <div class="form-group">
           <label class="col-md-2 col-sm-3 col-xs-3 control-label">Subscribe</label>
           <div class="col-md-10 col-sm-9 col-xs-9">
+
+            <% if @is_subscribe %>
+              <% @yes_checked ="checked" %>
+              <% @no_checked = "" %>
+            <% else %>
+              <% @yes_checked ="" %>
+              <% @no_checked = "checked" %>
+            <% end %>
+
             <label class="radio-inline">
-              <input type="radio" value="1" name="user[newsletter]">
+              <input type="radio" value="1" name="user[newsletter]" <%if @yes_checked.present?%> checked <%end%> >
               Yes</label>
             <label class="radio-inline">
-              <input type="radio" checked="checked" value="0" name="user[newsletter]">
+              <input type="radio"  value="0" name="user[newsletter]" <%if @no_checked.present?%> checked <%end%> >
               No</label>
           </div>
         </div>
