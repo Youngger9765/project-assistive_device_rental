@@ -89,10 +89,11 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.action_mailer.default_url_options = { host: 'http://localhost:3000' }
+  # 上線前修改
+  config.action_mailer.default_url_options = { host: 'http://139.162.112.159'  }
   # config.action_mailer.default_url_options ={host:"servicealarm@cloudberry.com.tw"}
   # config.action_mailer.delivery_method = :letter_opener
-  
+
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address: 'smtp.gmail.com',
@@ -104,5 +105,4 @@ Rails.application.configure do
     enable_starttls_auto: true
   }
 
-  
 end
